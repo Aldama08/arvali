@@ -1,5 +1,16 @@
 <footer>
-    Since your dreams
+    <nav class="bottombar">
+        <a href="">
+            <img src="/public/Arvali_completo.svg" alt="Logo_Completo">
+        </a>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61585983227439" target="_blank" class="media">Facebook</a>
+            <a href="https://www.linkedin.com/" target="_blank"class="media">Linkedin</a>
+            <a href="https://www.x.com/" target="_blank" class="media">Twitter</a>
+        </div>
+
+    </nav>
 <footer>
 
 
@@ -12,5 +23,36 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 0 3%;
 	}	
+
+    .bottombar{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .bottombar img {
+    height: 100px; 
+    width: auto;  
+    display: block;
+    padding-bottom: 15px;
+    }
+
+    .social-links{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .media{
+        text-decoration: none;
+        color: #e7e8ec;
+        font-size: medium;
+        transition: color 0.3s;
+    }
+    .media:hover{
+        color: #bbc8d7;
+    }
 </style>

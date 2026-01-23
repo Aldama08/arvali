@@ -1,0 +1,72 @@
+<header>
+    <nav class="navbar">
+        <a href="/" class="Logo">Logo</a>
+
+        <div class="menu-links">
+            <a href="/servicios" class="navegation">Servicios</a>
+            <a href="/nosotros" class="navegation">Nosotros</a>
+            <a href="/contacto" class="btn-contacto">CONTACTO</a>
+        </div>
+    </nav>     
+</header>
+
+<style>
+        header {
+        background-color: #ffffff;
+        height: 80px; /* Un poco más alto para que respire */
+        display: flex;
+        align-items: center;
+        padding: 0 10%; /* Espacio a los lados para que no toque los bordes de la pantalla */
+        border-bottom: 1px solid #f0f0f0;
+        flex-shrink: 0;
+    }
+
+    .navbar {
+        display: flex;
+        width: 100%;
+        justify-content: space-between; /* Empuja el logo a la izquierda y el menú a la derecha */
+        align-items: center;
+    }
+
+    .Logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: #092c4a;
+        letter-spacing: -1px;
+    }
+
+    .menu-links {
+        display: flex;
+        align-items: center;
+        gap: 25px; /* Espacio uniforme entre cada enlace */
+    }
+
+    .navegation {
+        text-decoration: none;
+        color: #666; /* Gris profesional */
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    .navegation:hover {
+        color: #0088cc; /* Color azul al pasar el mouse */
+    }
+
+    /* El botón azul de la derecha */
+    .btn-contacto {
+        background-color: #0088cc;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 0.85rem;
+        transition: background 0.3s;
+    }
+
+    .btn-contacto:hover {
+        background-color: #006699;
+    }
+</style>

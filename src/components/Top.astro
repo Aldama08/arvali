@@ -11,7 +11,7 @@ const whatsapp = import.meta.env.WHATSAPP;
     </hgroup>
 
     <div class="info-container">
-        <a class="info-buttom" href="/src/components/Info.astro">
+        <a class="info-buttom" href="#Servicios">
             <h4>Información</h4>
         </a>
         <a target="_blank" class="whatsapp-buttom" href={whatsapp}>
@@ -24,6 +24,7 @@ const whatsapp = import.meta.env.WHATSAPP;
 
 <style>
     .main-Container{
+        margin: 0;
         display: flex;
         flex-direction: column;
         max-width: 100%;
@@ -34,6 +35,7 @@ const whatsapp = import.meta.env.WHATSAPP;
         justify-content: center;
         position: relative;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        gap: 2rem;
     }
 
     .text{

@@ -1,82 +1,75 @@
-<div class="main-Container">
-    <aside>
-        <p>Hola</p>
-    </aside>
-    <section class="content">
-        
-        <hgroup class="text"> 
-        <h1>Mejorando tu infraestructura</h1>
-        <h2>Dar mejores soluciones</h2>
-        </hgroup>
+---
+const whatsapp = import.meta.env.WHATSAPP;
+---
 
-        <div class="info-container">
-            <a class="info-buttom" href="">
-                <h4>Información</h4>
-            </a>
-            <a class="whatsapp-buttom" href="https://www.wa.link/0xqzwm">
-                <img class="whatsapp-img" src="/whatsapp-completo.svg" alt="Whatsapp">
-            </a>
-        </div>
-    </section>
-    
-</div>
+
+<section class="main-Container">
+
+    <hgroup class="text">
+    <h1>Mejorando tu infraestructura</h1>
+    <h2>Dar mejores soluciones</h2>
+    </hgroup>
+
+    <div class="info-container">
+        <a class="info-buttom" href="/src/components/Info.astro">
+            <h4>Información</h4>
+        </a>
+        <a target="_blank" class="whatsapp-buttom" href={whatsapp}>
+            <img  class="whatsapp-img" src="/whatsapp-completo.svg" alt="Whatsapp">
+        </a>
+    </div>
+</section>
+
+
 
 <style>
     .main-Container{
-        max-width: 100%;
-        height: 35%;
-        border: 1px solid #111;
-    }
-    aside{
-        width: 50%;
-        padding-left: 1rem;
-        margin-left: 1rem;
-        float: right;
-        box-shadow: inset 5px 0 5px -5px  #29627e ;
-    }
-    aside p {
-        margin: 0.5rem;
-    }
-
-    .content{
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        max-width: 100%;
+        min-height: 60hv;
+        /* border: 1px solid #111; */
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
     .text{
         padding: 15px;
     }
     .text h1{
-        padding-left: 300px;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: 35px;
+        margin: 1rem;
+        font-size: 3rem;
     }
     .text h2{
-        padding-left: 400px;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        font-size: x-larger;
+        margin: 10px ;
+        font-size: 2rem;
+        font-weight: normal;
     }
 
     .info-container{
         display: flex;
         justify-content: center;
-        gap: 15px;
+        align-items: center;
+        gap: 50px;
         padding: 1rem;
-        width: 30%;
-        height: 80px;
-        padding-left: 460px;
+        width: 100%;
     }
 
     .info-buttom{
         text-decoration: none;
         color: black;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifs;
-        font-size: large;
     }
-   
+    .info-buttom h4{
+        margin: 0;
+    }
+
     .whatsapp-img{
-        max-width: 100%;
+        display: block;
+        max-width: 120px;
+        height: auto;
     }
 
 

@@ -15,7 +15,8 @@ const Forms = () => {
     nombre: '',
     apellido: '',
     correo: '',
-    telefono: ''
+    telefono: '',
+    comentario: ''
   });
 
   const manejoCambio = (evento) =>{
@@ -35,7 +36,8 @@ const Forms = () => {
         nombre: formData.nombre,
         apellido: formData.apellido,
         correo: formData.correo,
-        telefono: formData.telefono
+        telefono: formData.telefono,
+        comentario: formData.comentario
       }
     ]);
 
@@ -61,6 +63,9 @@ const Forms = () => {
       <hr />
       <label>Telefono</label>
       <input type='text' name='telefono' value={formData.telefono} onChange={manejoCambio}/>
+      <hr />
+      <label>Comentario</label>
+      <textarea type='text' name='comentario' value={formData.comentario} onChange={manejoCambio}/>
       <hr />
       <button type='submit'>enviar</button>
     </form>

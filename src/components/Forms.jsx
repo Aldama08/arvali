@@ -19,32 +19,39 @@ const Forms = () => {
     comentario: ''
   });
 
-  const manejoCambio = (evento) =>{
-    setFormData({
-      ...formData,
-      [evento.target.name]: evento.target.value
-    })
+  // const manejoCambio = (evento) =>{
+  //   setFormData({
+  //     ...formData,
+  //     [evento.target.name]: evento.target.value
+  //   })
+  // }
+const manejoCambio = (evento) =>{
+    const {name, value} = evento.target;
+      setFormData(prevState =>({
+        ...prevState, [name]:value
+      }))
   }
+
 
   const Enviar = async (evento) => {
     evento.preventDefault();
 
     const {data, error} = await supabase
     .from('cliente')
-    .insert([
-      {
-        nombre: formData.nombre,
-        apellido: formData.apellido,
-        correo: formData.correo,
-        telefono: formData.telefono,
-        comentario: formData.comentario
-      }
-    ]);
+    .insert([ formData ]);
 
     if(error){
       alert('Error al insertar' + error.message)
     }else{
       alert('Datos enviados!')
+
+      setFormData({
+        nombre: '',
+        apellido: '',
+        correo: '',
+        telefono: '',
+        comentario: ''
+      })
     }
 
   };
